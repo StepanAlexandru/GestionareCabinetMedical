@@ -1,0 +1,17 @@
+==============================================
+       RAPORT MEDICAL - CABINET MEDICAL       
+==============================================
+PACIENT: STEPAN Alexandru-Pavel
+CNP: 1234567890123
+DATA CONSULTATIEI: 2026-01-28T14:33
+----------------------------------------------
+DIAGNOSTIC: Rinita alergica sezoniera
+SIMPTOME: Stranut repetat, ochi inrositi, dificultati respiratorii usoare
+ALERGII: Penicilina, Polen, Praf
+TRATAMENT RECOMANDAT: Claritine 10mg, Spray nazal cu apa de mare
+----------------------------------------------
+OBSERVATII FINALE:
+A se evita prescrierea de antibiotice din clasa beta-lactaminelor
+----------------------------------------------
+Generat la data: 2026-01-26T15:34:38.734223500
+==============================================
