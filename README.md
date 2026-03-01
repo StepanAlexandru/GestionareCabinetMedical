@@ -1,25 +1,40 @@
-Sistem Gestiune Cabinet Medical 
+# Medical Office Management System 
 
-Descriere Proiect: Aplicatie desktop dezvoltata in Java pentru administrarea eficienta a bazei de date a unui cabinet medical. Proiectul faciliteaza gestionarea pacientilor si securizarea datelor sensibile conform standardelor moderne. 
+A robust Java desktop application designed for efficient patient data administration and secure medical record handling. This project focuses on data privacy and follows a clean, modular architecture.
 
-Functionalitati Cheie: 
+## Key Features
 
-Operatii CRUD: Permite adaugarea, vizualizarea, editarea si stergerea pacientilor. 
+* **Full CRUD Functionality:** Seamlessly add, view, edit, and delete patient records.
+* **Advanced Security (AES-128):** Automatic encryption of sensitive data (National ID/CNP) before database storage to ensure GDPR compliance and data privacy.
+* **Live Search System:** Real-time filtering of the patient database as you type, implemented via `DocumentListener`.
+* **Automated Reporting:** Generate and export detailed medical reports in `.txt` format for each consultation.
+* **Data Validation:** Built-in logic to ensure all required fields are correctly filled before database entry.
 
-Securitate AES: Criptarea automata a CNP-ului in baza de date pentru protectia datelor cu caracter personal. 
+## Tech Stack
 
-Cautare Live: Filtrarea automata a listei de pacienti in timp ce utilizatorul tasteaza numele sau CNP-ul. 
+* **Language:** Java (JDK 17+)
+* **GUI Framework:** Java Swing
+* **Database:** MySQL
+* **Connectivity:** JDBC (Java Database Connectivity)
+* **Security:** AES Symmetric Encryption (Java Cryptography Architecture)
+* **Version Control:** Git & GitHub
 
-Export Rapoarte: Generarea de fise medicale in format .txt pentru fiecare consultatie. 
+## Software Architecture
 
-Tehnologii Utilizate: 
+The project follows a **Layered Architecture** (Service-Repository pattern) to ensure a high degree of maintainability and scalability:
 
-Limbaj: Java (Swing pentru interfata grafica). 
+* **`model`**: Defines the data structure (POJOs).
+* **`repository`**: Handles direct database interaction using SQL and PreparedStatements.
+* **`controller` (Service)**: Contains the business logic, data validation, and bridges the UI with the Data Layer.
+* **`util`**: Utility classes for encryption (`CryptoUtils`) and validation helpers.
+* **`view`**: The Graphical User Interface components.
 
-Baza de date: MySQL (conectare prin JDBC). 
+Database Setup:
+Create a MySQL database named cabinet_medical.
+Run the provided SQL script to create the pacienti table.
 
-Securitate: Algoritm de criptare simetrica AES-128. 
+Configuration:
+Update the DatabaseConnection class with your MySQL username and password.
 
-Arhitectura: Codul este organizat pe straturi (Controller, Model, Repository, Util) pentru a separa logica de business de interfata grafica si de accesul la date, facand aplicatia usor de intretinut si scalat. 
-
- 
+Run:
+Execute the Main class from your preferred IDE.
